@@ -3,7 +3,7 @@
   apt_repository:
     repo: "{{ gstreamer_ppa }}"
     state: present
-  when: ansible_distribution_release == precise
+  when: ansible_distribution_release == "precise"
 
 - name: Install core GStreamer packages
   apt:
