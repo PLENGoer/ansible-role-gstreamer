@@ -1,0 +1,30 @@
+---
+- name: Add back-ported packages PPA for Ubuntu Precise
+  apt_repository:
+    repo: "{{ gstreamer_ppa }}"
+    state: present
+  when: ansible_distribution_release == precise
+
+- name: Install core GStreamer packages
+  apt:
+    pkg: "{{ item }}"
+    state: present
+  with_items:
+  - gstreamer1.0-tools
+  - gir1.2-gstreamer-1.0
+  - gir1.2-gst-plugins-base-1.0
+  - gstreamer1.0-libav
+
+- name: Install plugins
+  apt:
+    pkg: "gstreamer1.0-plugins-{{ item.key }}"
+    state: present
+  with_dict: "{{ gstreamer_plugins }}"
+  when: item.value
+
+- name: Install Python wrappers
+  apt:
+    pkg: "{{ item.value.lib_name }}"
+    state: present
+  with_dict: "{{ gstreamer_wrappers }}"
+  when: item.value.install

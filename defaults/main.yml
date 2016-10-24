@@ -1,0 +1,17 @@
+---
+gstreamer_ppa: "ppa:gstreamer-developers/ppa"
+
+# Select the plugins to install
+gstreamer_plugins:
+  good: no
+  bad: no
+  ugly: no
+
+# Optionally enable programming in Python
+gstreamer_wrappers:
+  python:
+    lib_name: "python-gi"
+    install: no
+  python3:
+    lib_name: "python3-gi"
+    install: no
