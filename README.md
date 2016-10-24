@@ -16,12 +16,14 @@ Available variables are listed below, along with default values:
     gstreamer_ppa: "ppa:gstreamer-developers/ppa"
     
 (Select the plugins to install)
+
     gstreamer_plugins:
       good: yes
       bad: no
       ugly: no
 
 (Optionally enable programming in Python)
+
     gstreamer_wrappers:
       python:
         lib_name: "python-gi"
