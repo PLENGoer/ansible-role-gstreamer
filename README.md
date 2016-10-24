@@ -58,7 +58,7 @@ MIT
 Author Information
 ------------------
 
-This role was created in 2015 by James Giller, PLENGoer Robotics Inc.
+This role was created in 2016 by James Giller, PLENGoer Robotics Inc.
 
 References
 ----------
