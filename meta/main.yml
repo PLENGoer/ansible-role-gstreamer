@@ -1,6 +1,6 @@
 galaxy_info:
   author: James Giller
-  description: GStreamer1.0 installer.
+  description: GStreamer1.0 installer
   company: PLENGoer Robotics Inc.
 
   # If the issue tracker for your role is not on github, uncomment the
